@@ -15,7 +15,7 @@ public class App {
         "\n\nIngresa la opción"
       )
     );
-    int max = 4;
+    int max = 30;
     Uno obj1 = new Uno(max);
 
     do {
