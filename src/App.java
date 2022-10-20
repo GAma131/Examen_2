@@ -21,7 +21,23 @@ public class App {
     do {
       switch (opcion) {
         case 1:
-          obj1.llenarArreglo(solicitarValores(max));
+          JOptionPane.showMessageDialog(
+            null,
+            "Vector Original:\n" +
+            obj1.llenarArreglo(solicitarValores(max)) +
+            "\nVector Ordenado:\n" +
+            obj1.ordenarBurbujaAsc() +
+            "\nNúmero más alto: " +
+            obj1.obtenerMaximo() +
+            "\nNúimero más bajo: " +
+            obj1.obtenerMinimo() +
+            "\nMedia artimetica: " +
+            obj1.obtenerMedia() +
+            "\nModa: " +
+            obj1.obtenerModa() +
+            "\nMediana: " +
+            obj1.calcularMediana()
+          );
           break;
         case 2:
           System.out.println("2");
