@@ -36,7 +36,9 @@ public class App {
             "\nModa: " +
             obj1.obtenerModa() +
             "\nMediana: " +
-            obj1.calcularMediana()
+            obj1.calcularMediana() +
+            "\nPorcentaje:\n" +
+            obj1.calcularPorcentaje()
           );
           break;
         case 2:
