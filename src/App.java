@@ -1,3 +1,4 @@
+import Ejercicios.Dos;
 import Ejercicios.Uno;
 import javax.swing.JOptionPane;
 
@@ -5,20 +6,24 @@ public class App {
 
   public static void main(String[] args) throws Exception {
     boolean sentinel = true;
-    int opcion = Integer.parseInt(
-      JOptionPane.showInputDialog(
-        null,
-        "Elige una opción:" +
-        "\n\n1) Ejercicio 1" +
-        "\n2) Ejercicio 2" +
-        "\n3) Salir" +
-        "\n\nIngresa la opción"
-      )
-    );
+    int opcion = 0;
     int max = 30;
+    int puntaje = 20;
     Uno obj1 = new Uno(max);
+    Dos obj2 = new Dos(puntaje);
 
     do {
+      opcion =
+        Integer.parseInt(
+          JOptionPane.showInputDialog(
+            null,
+            "Elige una opción:" +
+            "\n\n1) Ejercicio 1" +
+            "\n2) Ejercicio 2" +
+            "\n0) Salir" +
+            "\n\nIngresa la opción"
+          )
+        );
       switch (opcion) {
         case 1:
           JOptionPane.showMessageDialog(
@@ -42,9 +47,14 @@ public class App {
           );
           break;
         case 2:
-          System.out.println("2");
+          JOptionPane.showMessageDialog(
+            null,
+            "Vector original:\n" +
+            obj2.llenarArreglo(solicitarValores(puntaje)) +
+            obj2.clasificarAlumnos()
+          );
           break;
-        case 3:
+        case 0:
           sentinel = false;
           break;
         default:

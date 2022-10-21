@@ -158,7 +158,7 @@ public class Uno {
   //   return "\nCantidades de 1 = " + contar[0] + " | Porcentaje de 1 = " + p1;
   // }
 
-  // ! Echo después de clase
+  // ! ECHO DESPUÉS DE CLASE
 
   public String calcularPorcentaje() {
     int[] contar = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -167,7 +167,7 @@ public class Uno {
     int j = 1;
     String imp = "";
 
-    for (int i = 0; i < tamano; i++) {
+    for (int i = 0; i < contar.length; i++) {
       for (int valor : vector) {
         if (valor == j) {
           contar[i] += 1;
@@ -176,10 +176,10 @@ public class Uno {
       j++;
       total = ((double) contar[i] / (double) tamano) * 100;
 
-      porcent[i] = total;
+      porcent[i] = Math.round(total * 100.0) / 100.0;
     }
 
-    for (int i = 0; i < tamano; i++) {
+    for (int i = 0; i < contar.length; i++) {
       imp +=
         "Cantidades de " +
         (i + 1) +
